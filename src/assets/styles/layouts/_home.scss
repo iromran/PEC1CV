@@ -1,0 +1,151 @@
+body {
+  background-color: $uoc-bg;
+  color: $uoc-corporate;
+  font-family: $font-family-serif;
+}
+header{
+  background-color: rgb(30, 29, 46);
+  color: white;
+  font-weight: bold;
+  border-bottom: solid 3px;
+  border-bottom-color: rgb(1, 85, 134);
+  margin:0vh;
+  @media( min-width: 480px ) {
+    margin:0.5vh;
+    border-radius: 3%;
+    }
+}
+footer{
+  background-color: rgb(17, 0, 63);
+  margin:0vh;
+  @media( min-width: 480px ) {
+    border-radius: 3%;
+    margin:0.5vh;
+    }
+}
+.footer-div{
+  padding: 2vh;
+  text-align:center;
+}
+.footer-div__autor{
+  font-size: 14px;
+  color: white;
+}
+.datos-personales{
+  display: grid;
+  grid-template-columns: 100%;
+  @media( min-width: 480px ) {
+    grid-template-columns: 40% 60%;
+    }
+  @media( min-width: 720px ) {
+    grid-template-columns: 25% 75%;
+    }
+}
+.datos-personales__imagen {
+  display: block;
+  margin: auto;
+  width: 170px;
+  height: auto;
+}
+.datos-personales__listado{
+  list-style-type: none;
+  font-size: 22px;
+  margin: 15px 15px 15px 0px;
+}
+
+.cv{
+  display: grid;
+  grid-template-columns: 100%;
+  margin:0vh;
+  @media( min-width: 480px ) {
+    grid-template-columns: 40% 60%;
+    margin: 0.5vh;
+  }
+  @media( min-width: 720px ) {
+    grid-template-columns: 25% 75%;
+  }
+}
+.cv-especifico{
+  background-color: rgb(61, 95, 245);
+  color: white;
+  margin-right:0vh;
+  @media( min-width: 480px ) {
+    border-radius: 3%;
+    margin:0.5vh;
+    }
+}
+.datos-especificos{
+  margin-top: 1vh;
+  margin-left: 1vh;
+}
+.datos-especificos__categoria{
+  background-color: rgb(68, 68, 68);
+  padding: 10px;
+  margin: 10px;
+  border-top-right-radius: 25%;
+  border-bottom: solid 1px;
+  border-bottom-color: rgb(155, 175, 156);
+  font-size: 22px;
+  font-weight: bold;
+}
+.datos-especificos__listado{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  font-size: 16px;
+  margin: 1vh;
+}
+.datos-especificos__descripcion{
+  margin: 1vh;
+}
+.datos-especificos__parrafo{
+  margin: 1vh;
+}
+.datos-especificos__habilidad{
+  font-weight: bold;
+}
+.datos-especificos__calificacion{
+  color: rgb(217, 255, 0);
+}
+.cv-general{
+  background-color: rgb(173, 255, 248);
+  margin:0vh;
+  @media( min-width: 480px ) {
+    border-radius: 3%;
+    margin:0.5vh;
+    }
+}
+.datos-generales{
+  margin-top: 1vh;
+  margin-left: 3vh;
+}
+.datos-generales__categoria{
+  background-color: rgb(158, 232, 250);
+  padding: 10px;
+  margin: 10px;
+  font-weight: bold;
+  border-top-right-radius: 25%;
+  border-bottom: solid 1px;
+  border-bottom-color: rgb(155, 175, 156);
+  font-size: 22px;
+  
+}
+.datos-generales__listado{
+  font-size: 14px;
+  margin: 1vh;
+  
+}
+.datos-generales__titulo{
+  font-size: 20px;
+}
+.datos-generales__descripcion{
+  margin: 22px;
+}
+.datos-generales__parrafo{
+  font-size: 14px;
+}
+.uoc-title {
+  font-family: $font-family-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: $uoc-corporate;
+}
