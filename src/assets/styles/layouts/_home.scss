@@ -1,26 +1,26 @@
 body {
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
   font-family: $font-family-serif;
+  color: $cv-color-font;
+  background-color: $cv-bg;
 }
 header{
-  background-color: rgb(30, 29, 46);
-  color: white;
-  font-weight: bold;
-  border-bottom: solid 3px;
-  border-bottom-color: rgb(1, 85, 134);
   margin:0vh;
-  @media( min-width: 480px ) {
+  font-weight: bold;
+  color: $cv-white-color-font;
+  background-color: $header-footer-color;
+  border-bottom: solid 3px;
+  border-bottom-color: $header-border-color;
+  @include for-table {
     margin:0.5vh;
     border-radius: 3%;
     }
 }
 footer{
-  background-color: rgb(17, 0, 63);
   margin:0vh;
-  @media( min-width: 480px ) {
-    border-radius: 3%;
+  background-color: $header-footer-color;
+  @include for-table {
     margin:0.5vh;
+    border-radius: 3%;
     }
 }
 .footer-div{
@@ -28,50 +28,54 @@ footer{
   text-align:center;
 }
 .footer-div__autor{
-  font-size: 14px;
-  color: white;
+  font-size: $cv-listadog-font-size;
+  color: $cv-white-color-font;
 }
 .datos-personales{
   display: grid;
   grid-template-columns: 100%;
-  @media( min-width: 480px ) {
+  @include for-table {
     grid-template-columns: 40% 60%;
     }
-  @media( min-width: 720px ) {
+  @include for-pc {
     grid-template-columns: 25% 75%;
     }
 }
 .datos-personales__imagen {
   display: block;
-  margin: auto;
-  width: 170px;
+  width: 10.65em;
   height: auto;
+  margin: auto;
+
 }
 .datos-personales__listado{
+  margin: 0.93em 0.93em 0.93em 0.93em;
+  font-size: $cv-listadop-font-size;
   list-style-type: none;
-  font-size: 22px;
-  margin: 15px 15px 15px 0px;
+  @include for-table {
+    font-size: $cv-header-font-size;
+  }
 }
 
 .cv{
   display: grid;
   grid-template-columns: 100%;
   margin:0vh;
-  @media( min-width: 480px ) {
+  @include for-table {
     grid-template-columns: 40% 60%;
     margin: 0.5vh;
   }
-  @media( min-width: 720px ) {
+  @include for-pc {
     grid-template-columns: 25% 75%;
   }
 }
 .cv-especifico{
-  background-color: rgb(61, 95, 245);
-  color: white;
   margin-right:0vh;
-  @media( min-width: 480px ) {
-    border-radius: 3%;
+  color: $cv-white-color-font;
+  background-color: $especifico-bg-color;
+  @include for-table {
     margin:0.5vh;
+    border-radius: 3%;
     }
 }
 .datos-especificos{
@@ -79,20 +83,20 @@ footer{
   margin-left: 1vh;
 }
 .datos-especificos__categoria{
-  background-color: rgb(68, 68, 68);
-  padding: 10px;
-  margin: 10px;
-  border-top-right-radius: 25%;
-  border-bottom: solid 1px;
-  border-bottom-color: rgb(155, 175, 156);
-  font-size: 22px;
+  padding: $cv-default-pm;
+  margin: $cv-default-pm;
+  font-size: $cv-header-font-size;
   font-weight: bold;
+  background-color: $especifico-categoria-color;
+  border-bottom: solid 1px;
+  border-bottom-color: $categoria-border-color;
+  border-top-right-radius: 25%;
 }
 .datos-especificos__listado{
   display: grid;
   grid-template-columns: 50% 50%;
-  font-size: 16px;
   margin: 1vh;
+  font-size: $cv-listadoe-font-size;
 }
 .datos-especificos__descripcion{
   margin: 1vh;
@@ -104,14 +108,14 @@ footer{
   font-weight: bold;
 }
 .datos-especificos__calificacion{
-  color: rgb(217, 255, 0);
+  color: $cv-calificacion-color;
 }
 .cv-general{
-  background-color: rgb(173, 255, 248);
   margin:0vh;
-  @media( min-width: 480px ) {
-    border-radius: 3%;
+  background-color: $general-bg-color;
+  @include for-table {
     margin:0.5vh;
+    border-radius: 3%;
     }
 }
 .datos-generales{
@@ -119,33 +123,27 @@ footer{
   margin-left: 3vh;
 }
 .datos-generales__categoria{
-  background-color: rgb(158, 232, 250);
-  padding: 10px;
-  margin: 10px;
+  padding: $cv-default-pm;
+  margin: $cv-default-pm;
+  font-size: $cv-header-font-size;
   font-weight: bold;
-  border-top-right-radius: 25%;
+  background-color: $general-categoria-color;
   border-bottom: solid 1px;
-  border-bottom-color: rgb(155, 175, 156);
-  font-size: 22px;
-  
+  border-bottom-color: $categoria-border-color;
+  border-top-right-radius: 25%;
 }
 .datos-generales__listado{
-  font-size: 14px;
   margin: 1vh;
-  
+  font-size: $cv-listadog-font-size;
 }
 .datos-generales__titulo{
-  font-size: 20px;
+  font-size: $cv-titulo-font-size;
+  font-weight: bold;
 }
 .datos-generales__descripcion{
-  margin: 22px;
+  margin: $cv-header-font-size;
 }
 .datos-generales__parrafo{
-  font-size: 14px;
+  font-size: $cv-listadog-font-size;
 }
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 36px;
-  font-weight: 700;
-  color: $uoc-corporate;
-}
+
