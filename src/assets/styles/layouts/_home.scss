@@ -10,7 +10,7 @@ header{
   background-color: $header-footer-color;
   border-bottom: solid 3px;
   border-bottom-color: $header-border-color;
-  @include for-table {
+  @include for-tablet {
     margin:0.5vh;
     border-radius: 3%;
     }
@@ -18,7 +18,7 @@ header{
 footer{
   margin:0vh;
   background-color: $header-footer-color;
-  @include for-table {
+  @include for-tablet {
     margin:0.5vh;
     border-radius: 3%;
     }
@@ -26,42 +26,42 @@ footer{
 .footer-div{
   padding: 2vh;
   text-align:center;
-}
-.footer-div__autor{
-  font-size: $cv-listadog-font-size;
-  color: $cv-white-color-font;
+  &__autor{
+    font-size: $cv-listadog-font-size;
+    color: $cv-white-color-font;
+  }
 }
 .datos-personales{
   display: grid;
   grid-template-columns: 100%;
-  @include for-table {
+  @include for-tablet {
     grid-template-columns: 40% 60%;
-    }
+  }
   @include for-pc {
     grid-template-columns: 25% 75%;
-    }
-}
-.datos-personales__imagen {
-  display: block;
-  width: 10.65em;
-  height: auto;
-  margin: auto;
-
-}
-.datos-personales__listado{
-  margin: 0.93em 0.93em 0.93em 0.93em;
-  font-size: $cv-listadop-font-size;
-  list-style-type: none;
-  @include for-table {
-    font-size: $cv-header-font-size;
   }
+  &__imagen {
+    display: block;
+    width: 10.65em;
+    height: auto;
+    margin: auto;
+  
+  }
+  &__listado{
+    margin: 0.93em;
+    font-size: $cv-listadop-font-size;
+    list-style-type: none;
+    @include for-tablet {
+      font-size: $cv-header-font-size;
+    }
+  }  
 }
 
 .cv{
   display: grid;
   grid-template-columns: 100%;
   margin:0vh;
-  @include for-table {
+  @include for-tablet {
     grid-template-columns: 40% 60%;
     margin: 0.5vh;
   }
@@ -73,7 +73,7 @@ footer{
   margin-right:0vh;
   color: $cv-white-color-font;
   background-color: $especifico-bg-color;
-  @include for-table {
+  @include for-tablet {
     margin:0.5vh;
     border-radius: 3%;
     }
@@ -81,39 +81,40 @@ footer{
 .datos-especificos{
   margin-top: 1vh;
   margin-left: 1vh;
+  &__categoria{
+    padding: $cv-default-pm;
+    margin: $cv-default-pm;
+    font-size: $cv-header-font-size;
+    font-weight: bold;
+    background-color: $especifico-categoria-color;
+    border-bottom: solid 1px;
+    border-bottom-color: $categoria-border-color;
+    border-top-right-radius: 25%;
+  }
+  &__listado{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 1vh;
+    font-size: $cv-listadoe-font-size;
+  }
+  &__descripcion{
+    margin: 1vh;
+  }
+  &__parrafo{
+    margin: 1vh;
+  }
+  &__habilidad{
+    font-weight: bold;
+  }
+  &__calificacion{
+    color: $cv-calificacion-color;
+  }
 }
-.datos-especificos__categoria{
-  padding: $cv-default-pm;
-  margin: $cv-default-pm;
-  font-size: $cv-header-font-size;
-  font-weight: bold;
-  background-color: $especifico-categoria-color;
-  border-bottom: solid 1px;
-  border-bottom-color: $categoria-border-color;
-  border-top-right-radius: 25%;
-}
-.datos-especificos__listado{
-  display: grid;
-  grid-template-columns: 50% 50%;
-  margin: 1vh;
-  font-size: $cv-listadoe-font-size;
-}
-.datos-especificos__descripcion{
-  margin: 1vh;
-}
-.datos-especificos__parrafo{
-  margin: 1vh;
-}
-.datos-especificos__habilidad{
-  font-weight: bold;
-}
-.datos-especificos__calificacion{
-  color: $cv-calificacion-color;
-}
+
 .cv-general{
   margin:0vh;
   background-color: $general-bg-color;
-  @include for-table {
+  @include for-tablet {
     margin:0.5vh;
     border-radius: 3%;
     }
@@ -121,29 +122,33 @@ footer{
 .datos-generales{
   margin-top: 1vh;
   margin-left: 3vh;
+  &__categoria{
+    padding: $cv-default-pm;
+    margin: $cv-default-pm;
+    font-size: $cv-header-font-size;
+    font-weight: bold;
+    background-color: $general-categoria-color;
+    border-bottom: solid 1px;
+    border-bottom-color: $categoria-border-color;
+    border-top-right-radius: 25%;
+  }
+  &__listado{
+    margin: 1vh;
+    font-size: $cv-listadog-font-size;
+  }
+  &__titulo{
+    font-size: $cv-titulo-font-size;
+    font-weight: bold;
+    &--cursive{
+      font-size: $cv-titulo-font-size;
+      font-style:italic;
+      font-weight: bold;
+    }
+  }
+  &__descripcion{
+    margin: $cv-header-font-size;
+  }
+  &__parrafo{
+    font-size: $cv-listadog-font-size;
+  }
 }
-.datos-generales__categoria{
-  padding: $cv-default-pm;
-  margin: $cv-default-pm;
-  font-size: $cv-header-font-size;
-  font-weight: bold;
-  background-color: $general-categoria-color;
-  border-bottom: solid 1px;
-  border-bottom-color: $categoria-border-color;
-  border-top-right-radius: 25%;
-}
-.datos-generales__listado{
-  margin: 1vh;
-  font-size: $cv-listadog-font-size;
-}
-.datos-generales__titulo{
-  font-size: $cv-titulo-font-size;
-  font-weight: bold;
-}
-.datos-generales__descripcion{
-  margin: $cv-header-font-size;
-}
-.datos-generales__parrafo{
-  font-size: $cv-listadog-font-size;
-}
-

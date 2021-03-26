@@ -1,4 +1,4 @@
-@mixin for-table {
+@mixin for-tablet {
     @media (min-width: 480px) { @content; }
   }
 @mixin for-pc {
